@@ -3,13 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Lightbox-Test</title>
+  <!-- Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" rel="stylesheet">
+  <!-- jQuery (muss vor Lightbox geladen werden) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
 </head>
 <body>
   <h1>🔍 Lightbox-Test</h1>
-  <a href="images/gelbe_wuerfelnatter-natrix_tesselata_flavescens-fisch_vrana-kroatien-2015.jpg" data-lightbox="gallery" data-title="Testbild – Futteraufnahme">
-    <img src="images/gelbe_wuerfelnatter-natrix_tesselata_flavescens-fisch_vrana-kroatien-2015.jpg" alt="Testbild" width="300">
+
+  <!-- Testbild mit funktionierender Lightbox -->
+  <a href="images/gelbe_wuerfelnatter-natrix_tessellata_flavescens-fisch-vrana-kroatien-2015.jpg" data-lightbox="gallery" data-title="Testbild – Futteraufnahme">
+    <img src="images/gelbe_wuerfelnatter-natrix_tessellata_flavescens-fisch-vrana-kroatien-2015.jpg" alt="Testbild" width="300">
   </a>
+
+  <!-- Lightbox-Testblock zur Konsolenprüfung -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof lightbox !== "undefined") {
+        console.log("✅ Lightbox ist aktiv.");
+      } else {
+        console.error("❌ Lightbox wurde nicht geladen.");
+      }
+    });
+  </script>
 </body>
 </html>
